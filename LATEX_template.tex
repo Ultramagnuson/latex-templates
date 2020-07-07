@@ -1,4 +1,4 @@
-\documentclass[12pt]{article}
+\documentclass[12pt]{amsart}
 %command    	10pt 	11pt 	12pt
 %tiny        	 5pt 	 6pt 	 6pt
 %scriptsize 	 7pt 	 8pt 	 8pt
@@ -18,6 +18,7 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{amsthm}
+\usepackage{amsrefs}
 \usepackage{mathrsfs}
 \usepackage{physics}
 \usepackage{xparse}
@@ -52,28 +53,48 @@
 \newcommand{\Ri}{\mathcal{R}}
 \newcommand{\Ai}{\mathcal{A}}
 
-\newcommand{\mytytle}[4]{
-\begin{center}
-	\LARGE{#1}\\[.25cm]
-	\Large{#2,~ #3}\\
-	\Large{#4}	
-\end{center}
-}
-
 %\usepackage{setspace}
 %\doublespacing
 
+\title{TITLE}
+\author{Thomas Magnuson\\ DATE}
 
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[C]{Thomas Magnuson: TITLE; Page \thepage}
-\fancyfoot[R]{}
+\fancyfoot[C]{}
 
 \begin{document}
-	\thispagestyle{empty}
-	\mytytle{TITLE}{Thomas Magnuson}{University of Colorado Boulder}{DATE}
+ 	\maketitle
  	\setlength{\parindent}{1.29cm}
-DOCUMENT DOCUMENT DOCUMENT DOCUMENT DOCUMENT DOCUMENT DOCUMENT DOCUMENT DOCUMENT DOCUMENT DOCUMENT DOCUMENT DOCUMENT DOCUMENT
+DOCUMENT DOCUMENT DOCUMENT DOCUMENT DOCUMENT DOCUMENT DOCUMENT DOCUMENT DOCUMENT DOCUMENT DOCUMENT DOCUMENT DOCUMENT DOCUMENT DOCUMENT DOCUMENT DOCUMENT DOCUMENT
+
 \end{document}
+%DOCUMENT \cite{TAG}
+%\begin{bibdiv}
+%	\begin{biblist}
+%		\bib{TAG}{book}{
+%			title={},
+%			author={},
+%			author={},
+%			date={},
+%			publisher={},
+%			address={}
+%		}
+%
+%
+%
+%		\bib{TAG}{article}{
+%			title={},
+%			subtitle={},
+%			author={},
+%			journal={},
+%			volume={},
+%			date={},
+%			pages={}
+%		}
+		
+%	\end{biblist}
+%\end{bibdiv}
 
