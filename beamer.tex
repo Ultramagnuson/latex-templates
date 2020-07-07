@@ -70,27 +70,705 @@
 \def\wec#1{{\mathbf #1}}
 
 
-\title{TITLE}
+\title{Saturated models}
+
+%%%\subtitle
+%%%{Presentation Subtitle} % (optional)
+
+%%%\author[Author, Another] % (optional, use only with lots of authors)
+%%%{F.~Author\inst{1} \and S.~Another\inst{2}}
+%%%% - Use the \inst{?} command only if the authors have different
+%%%%   affiliation.
+%\author{Kearnes, Kiss, Szendrei}
 
 
+%%%\institute[Universities of Somewhere and Elsewhere] % (optional, but mostly needed)
+%%%{
+%%%  \inst{1}%
+%%%  Department of Computer Science\\
+%%%  University of Somewhere
+%%%  \and
+%%%  \inst{2}%
+%%%  Department of Theoretical Philosophy\\
+%%%  University of Elsewhere}
+%%%% - Use the \inst command only if there are several affiliations.
+%%%% - Keep it simple, no one is interested in your street address.
+
+%%%\date[Short Occasion] % (optional)
+%%%{Date / Occasion}
+%\date{January 20, 2014\\ University of Waterloo}
 \vskip -.2in
 
 \date[]{}
 
 
+%%%% If you have a file called "university-logo-filename.xxx", where xxx
+%%%% is a graphic format that can be processed by latex or pdflatex,
+%%%% resp., then you can add a logo as follows:
 
+%%\pgfdeclareimage[height=2cm]{godel}{godel.jpg}
+%%\logo{\pgfuseimage{godel}}
+
+
+%%%% Delete this, if you do not want the table of contents to pop up at
+%%%% the beginning of each subsection:
+%%%\AtBeginSubsection[]
+%%%{
+%%%  \begin{frame}<beamer>
+%%%    \frametitle{Outline}
+%%%    \tableofcontents[currentsection,currentsubsection]
+%%%  \end{frame}
+%%%}
 
 \begin{document}
 
 
+%%%\begin{frame}
+%%%  \frametitle{Outline}
+%%%  \tableofcontents
+%%%  % You might wish to add the option [pausesections]
+%%%\end{frame}
+
+
+% Since this a solution template for a generic talk, very little can
+% be said about how it should be structured. However, the talk length
+% of between 15min and 45min and the theme suggest that you stick to
+% the following rules:  
+
+% - Exactly two or three sections (other than the summary).
+% - At *most* three subsections per section.
+% - Talk about 30s to 2min per frame. So there should be between about
+%   15 and 30 frames, all told.
 
 \beamerdefaultoverlayspecification{<+->}
-
+%%%\subsection[Short First Subsection Name]{First Subsection Name}
 
 \begin{frame}
   \titlepage
 \end{frame}
 
+\begin{frame} 
+  \frametitle{Test slide}
+
+\begin{theorem}
+This is an ordinary theorem.
+\end{theorem}
+
+\begin{theoremFermat}
+This is Fermat's Theorem.
+\end{theoremFermat}
+
+\begin{reimann}
+This is the Riemann Hypothesis.
+\end{reimann}
+
+\begin{ACExample}
+This is almost a counterexample.
+\end{ACExample}
+
+\end{frame}
+
+
+\begin{frame} 
+  \frametitle{Models realizing many types}
+
+\pause
+Throughout these slides, $T$ will be a complete theory
+in a countable language which has infinite models.
+
+\bigskip
+\pause
+By the Compactness Theorem, any model
+of $T$ has an elementary extension that realizes all types.
+
+\bigskip
+\pause
+One expects such an extension to behave like a
+``completion'' or ``compactification''
+of the original model.
+
+\bigskip
+\pause
+    {\bf Defn.} Call a model $\mathbb S$ of $T$
+\emph{weakly saturated}
+if it realizes all types in $S_n(T)$ for all $n$.
+
+\end{frame}
+
+
+\begin{frame} 
+  \frametitle{Models realizing many types}
+
+
+\pause
+
+The definition of ``weakly saturated model''
+seems dual to the definition
+of atomic model, \pause so
+in an ideal world, the following would be true:
+\pause
+
+\begin{enumerate}
+\item Countable weakly saturated models of $T$ would exist. \pause
+\item Any two would be isomorphic. \pause
+\item Any countable model of $T$ would embed
+  elementarily into the weakly saturated model. \pause
+\item Two tuples in a weakly saturated model
+  would have the same type iff they
+  differed by an automorphism. \pause
+\end{enumerate}
+
+\medskip
+
+But all of these statements are false. \pause
+
+The first statement becomes true provided $|S_n(T)|<2^{\aleph_0}$
+for all $n$. \pause
+And then all statements become true with ``$\omega$-saturated''
+in place of ``weakly saturated''.
+\end{frame}
+
+\begin{frame} 
+  \frametitle{The Ehrenfeucht theory}
+
+  \pause
+
+{\bf Example.}
+Let $T$ be the theory of dense linear order without endpoints
+expanded by a strictly increasing $\omega$-chain of constants. \pause
+
+\bigskip
+
+\begin{enumerate}
+\item Signature involves $<, c_0, c_1, \ldots$ only. \pause
+
+\item Axioms for $T$ = \pause
+\begin{enumerate}
+\item[(i)] Axioms of dense linear orders without endpoints. \pause
+\item[(ii)] $c_i < c_{i+1}$ for each $i$. \pause
+\end{enumerate}
+
+\item Theory has q.e. and is complete by modhw3p3 (Eblen, Murali, Ornstein). \pause
+
+\item   ($I(T,\omega)=3$.) \pause
+  Theory has three isomorphism types of countable models. \pause
+Any countable model is isomorphic
+to one of the form $\langle \mathbb Q; <, c_0, c_1,\ldots\rangle$
+where \pause
+\begin{enumerate}
+\item[(i)] (Model $\mathbb M_1$)
+  The sequence $(c_i)_{i\in\omega}$ is unbounded. \pause
+\item[(ii)] (Model $\mathbb M_2$)  The sequence $(c_i)_{i\in\omega}$ has a least upper bound in the model. \pause
+\item[(iii)] (Model $\mathbb M_3$)  The sequence $(c_i)_{i\in\omega}$ has an upper bound in the model but has no least upper bound in the model. \pause
+\end{enumerate}
+\end{enumerate}
+
+\end{frame}
+
+\begin{frame} 
+  \frametitle{The countable models $\mathbb M_1, \mathbb M_2, \mathbb M_3$}
+  \pause
+
+\begin{figure}[!htbp]
+\setlength{\unitlength}{1truemm}
+\begin{picture}(100,60)
+\put(0,0)
+{
+\begin{tikzpicture}[scale=.7]
+\node at (1,5.5){Top};
+\node at (1.5,2){Bottom};
+\node at (1.5,1){$=\bigcup_i \; (c_i]$};
+
+\draw [fill] (4,1.5) circle [radius=0.08];
+\draw [fill] (4,2.1) circle [radius=0.08];
+\draw [fill] (4,2.6) circle [radius=0.08];
+\draw [fill] (4,3.0) circle [radius=0.08];
+\draw [fill] (4,3.3) circle [radius=0.08];
+\draw [fill] (4,3.5) circle [radius=0.08];
+\node at (4.4,1.4){$c_0$};
+\node at (4.4,2.0){$c_1$};
+\node at (4.4,2.5){$c_2$};
+\draw[densely dotted, line width=1pt] (4,0) -- (4,3.9);
+%\draw[line width=1pt] (4,4.1) -- (4,7);
+\node at (4.1,-.8){$\mathbb M_1$};
+\draw[black, line width=1pt] (3.84,0.05) arc (230:310:.25);
+\draw[black, line width=1pt] (4.16,3.85) arc (50:130:.25);
+
+\draw [fill] (8,1.5) circle [radius=0.08];
+\draw [fill] (8,2.1) circle [radius=0.08];
+\draw [fill] (8,2.6) circle [radius=0.08];
+\draw [fill] (8,3.0) circle [radius=0.08];
+\draw [fill] (8,3.3) circle [radius=0.08];
+\draw [fill] (8,3.5) circle [radius=0.08];
+\node at (8.4,1.4){$c_0$};
+\node at (8.4,2.0){$c_1$};
+\node at (8.4,2.5){$c_2$};
+\draw[densely dotted, line width=1pt] (8,0) -- (8,3.9);
+\draw[densely dotted, line width=1pt] (8,4.2) -- (8,7);
+\node at (8.1,-.8){$\mathbb M_2$};
+\draw[black, line width=1pt] (7.84,0.05) arc (230:310:.25);
+\draw[black, line width=1pt] (8.16,3.85) arc (50:130:.25);
+%\draw[black, line width=1pt] (7.84,4.25) arc (230:310:.25);
+\draw [fill] (8,4.25) circle [radius=0.08];
+\draw[black, line width=1pt] (8.16,7) arc (50:130:.25);
+
+
+\draw [fill] (12,1.5) circle [radius=0.08];
+\draw [fill] (12,2.1) circle [radius=0.08];
+\draw [fill] (12,2.6) circle [radius=0.08];
+\draw [fill] (12,3.0) circle [radius=0.08];
+\draw [fill] (12,3.3) circle [radius=0.08];
+\draw [fill] (12,3.5) circle [radius=0.08];
+\node at (12.4,1.4){$c_0$};
+\node at (12.4,2.0){$c_1$};
+\node at (12.4,2.5){$c_2$};
+\draw[densely dotted, line width=1pt] (12,0) -- (12,3.9);
+\draw[densely dotted, line width=1pt] (12,4.2) -- (12,7);
+\node at (12.1,-.8){$\mathbb M_3$};
+\draw[black, line width=1pt] (11.84,0.05) arc (230:310:.25);
+\draw[black, line width=1pt] (12.16,3.85) arc (50:130:.25);
+
+\draw[black, line width=1pt] (11.84,4.25) arc (230:310:.25);
+\draw[black, line width=1pt] (12.16,7) arc (50:130:.25);
+
+%\draw[line width=1.2pt] (1,0) -- (1,1);
+%\draw[line width=1.2pt] (1,4) ellipse (1 and 3);
+
+\draw[dashed, line width=1.2pt] (2,4) -- (15,4);
+\end{tikzpicture}
+}
+\end{picture}
+\begin{caption}
+  {$\textrm{Top}(x)=\{c_0<x, \;\;c_1<x, \;\;c_2<x,\;\ldots\}$,
+  nonisolated $p\in S_1(T)$}
+%  By q.e., this is a basis for a complete type
+\end{caption}
+\end{figure} 
+\end{frame}
+
+\begin{frame} 
+  \frametitle{Observations}
+  \pause
+\begin{enumerate}
+\item The fact that $I(T,\omega)=3$ can be checked
+  by noting that a countable model is determined
+  up to isomorphism by the part above all the constants, \pause
+  and that part is a (possibly empty) dense linear order
+  without top element. \pause
+\item All embeddings between models are elementary by q.e. \pause
+
+  $\mathbb M_1\prec \mathbb M_2 \prec \mathbb M_3 \prec \mathbb M_2$. \pause
+%\item $\mathbb M_1$ is atomic; \pause
+%$\mathbb M_2$ is weakly saturated, but not $\omega$-saturated; \pause
+%$\mathbb M_3$ is $\omega$-saturated.
+\item $I(T,\omega)<2^{\aleph_0}$ implies $S_n(T)$ is scattered for all $n$, \pause
+  so one of the models must
+  be atomic. \pause The only plausible candidate is $\mathbb M_1$. \pause
+\item All countable models embed elementarily into both
+  $\mathbb M_2$ and $\mathbb M_3$. \pause
+  This is enough to prove that $\mathbb M_2$ and $\mathbb M_3$
+  are both weakly saturated. \pause
+%\item The type of any tuple $\wec{m}\in \mathbb M_i^n$ is determined
+%  by specifying whether $m_j\Box m_k$ or $m_j\Box c_k$ where
+%  $\Box\in\{=, <, >\}$. \pause
+\item The model $\mathbb M_2$ does
+  not have the type-extension property. \pause
+
+  Let $p\in S_1(T)$ be the type $p(x_1)=\textrm{Top}(x_1)$. \pause
+  Let $q\in S_2(T)$ be the type
+  $q(x_1,x_2)=\textrm{Top}(x_1)\cup\textrm{Top}(x_2)\cup\{x_2<x_1\}$. \pause
+  $q|_1=p$. \pause
+  Let $a=\textrm{lub}(c_i)$. \pause
+
+  The $1$-tuple $(a)$ realizes $p$,
+  \pause
+  Some $1$-tuples that realize $p$ can be extended to $2$-tuples
+  that realize $q$. \pause
+  But the $1$-tuple $(a)$ cannot be extended to a $2$-tuple that realizes
+  $q$.
+\end{enumerate}
+\end{frame}
+
+
+\begin{frame} 
+  \frametitle{Tweaking the example by coloring the points}
+  \pause
+  We introduce two new unary relations, ${\textrm{red}}(x)$
+  and ${\textrm{blue}}(x)$. \pause
+  Our goal is to construct a theory like Ehrenfeucht's,
+  but with every point colored either red or blue, but not both
+  colors. \pause
+
+\begin{enumerate}
+\item Signature involves
+  $<, {\textrm{red}}(x), {\textrm{blue}}(x),  c_0, c_1, \ldots$ only. \pause
+
+\item Axioms for $T$ = \pause
+\begin{enumerate}
+\item[(i)] Axioms of linear orders without endpoints. \pause
+\item[(ii)] An axiom saying that each point has a unique color: \pause
+  \[
+\hspace{-.8in}{(\forall x)(
+  ({\textrm{red}}(x)\wedge \neg {\textrm{blue}}(x)) \vee
+  (\neg {\textrm{red}}(x)\wedge {\textrm{blue}}(x))
+  )}.
+  \]
+\pause
+\vspace{-.2in}
+\item[(iii)] Both red points and blue points are dense: \pause
+\[
+\hspace{-.8in}{(\forall w)(\forall x)
+((w<x)\to (\exists y)(\exists z)({\textrm{red}}(y)\wedge {\textrm{blue}}(z)
+\wedge (w<y<x)\wedge (w<z<x)))}.
+\]
+\pause
+\vspace{-.2in}
+\item[(iv)] $c_i < c_{i+1}$ for each $i$. \pause
+\item[(v)] ${\textrm{red}}(c_i)$ for each $i$. \pause
+\end{enumerate}
+\end{enumerate}
+\end{frame}
+
+
+\begin{frame} 
+  \frametitle{This theory has four countable models}
+  \pause
+
+\begin{figure}[!htbp]
+\setlength{\unitlength}{1truemm}
+\begin{picture}(100,60)
+\put(0,0)
+{
+\begin{tikzpicture}[scale=.7]
+\node at (1,5.5){Top};
+\node at (1.5,2){Bottom};
+
+
+\draw[blue, dotted, line width=1pt] (4,0.08) -- (4,3.9);
+\draw[red, dotted, line width=1pt] (4,0) -- (4,3.82);
+%\draw[blue, dotted, line width=1pt] (4,4.28) -- (4,7);
+%\draw[red, dotted, line width=1pt] (4,4.2) -- (4,6.92);
+
+\draw [red, fill] (4,1.5) circle [radius=0.08];
+\draw [red, fill] (4,2.1) circle [radius=0.08];
+\draw [red, fill] (4,2.6) circle [radius=0.08];
+\draw [red, fill] (4,3.0) circle [radius=0.08];
+\draw [red, fill] (4,3.3) circle [radius=0.08];
+\draw [red, fill] (4,3.5) circle [radius=0.08];
+\node at (4.4,1.4){$c_0$};
+\node at (4.4,2.0){$c_1$};
+\node at (4.4,2.5){$c_2$};
+\node at (4.1,-.8){$\mathbb N_1$};
+\draw[black, line width=1pt] (3.84,0.05) arc (230:310:.25);
+\draw[black, line width=1pt] (4.16,3.85) arc (50:130:.25);
+%\draw[black, line width=1pt] (7.84,4.25) arc (230:310:.25);
+%\draw [fill] (4,4.25) circle [radius=0.08];
+%\draw[black, line width=1pt] (4.16,7) arc (50:130:.25);
+
+
+\draw[blue, dotted, line width=1pt] (7,0.08) -- (7,3.9);
+\draw[red, dotted, line width=1pt] (7,0) -- (7,3.82);
+\draw[blue, dotted, line width=1pt] (7,4.28) -- (7,7);
+\draw[red, dotted, line width=1pt] (7,4.2) -- (7,6.92);
+
+\draw [red, fill] (7,1.5) circle [radius=0.08];
+\draw [red, fill] (7,2.1) circle [radius=0.08];
+\draw [red, fill] (7,2.6) circle [radius=0.08];
+\draw [red, fill] (7,3.0) circle [radius=0.08];
+\draw [red, fill] (7,3.3) circle [radius=0.08];
+\draw [red, fill] (7,3.5) circle [radius=0.08];
+\node at (7.4,1.4){$c_0$};
+\node at (7.4,2.0){$c_1$};
+\node at (7.4,2.5){$c_2$};
+\node at (7.1,-.8){$\mathbb N_2$};
+\draw[black, line width=1pt] (6.84,0.05) arc (230:310:.25);
+\draw[black, line width=1pt] (7.16,3.85) arc (50:130:.25);
+%\draw[black, line width=1pt] (7.84,4.25) arc (230:310:.25);
+\draw [red, fill] (7,4.25) circle [radius=0.08];
+\draw[black, line width=1pt] (7.16,7) arc (50:130:.25);
+
+\draw[blue, dotted, line width=1pt] (10,0.08) -- (10,3.9);
+\draw[red, dotted, line width=1pt] (10,0) -- (10,3.82);
+\draw[blue, dotted, line width=1pt] (10,4.28) -- (10,7);
+\draw[red, dotted, line width=1pt] (10,4.2) -- (10,6.92);
+
+\draw [red, fill] (10,1.5) circle [radius=0.08];
+\draw [red, fill] (10,2.1) circle [radius=0.08];
+\draw [red, fill] (10,2.6) circle [radius=0.08];
+\draw [red, fill] (10,3.0) circle [radius=0.08];
+\draw [red, fill] (10,3.3) circle [radius=0.08];
+\draw [red, fill] (10,3.5) circle [radius=0.08];
+\node at (10.4,1.4){$c_0$};
+\node at (10.4,2.0){$c_1$};
+\node at (10.4,2.5){$c_2$};
+\node at (10.1,-.8){$\mathbb N_3$};
+\draw[black, line width=1pt] (9.84,0.05) arc (230:310:.25);
+\draw[black, line width=1pt] (10.16,3.85) arc (50:130:.25);
+%\draw[black, line width=1pt] (7.84,4.25) arc (230:310:.25);
+\draw [blue, fill] (10,4.25) circle [radius=0.08];
+\draw[black, line width=1pt] (10.16,7) arc (50:130:.25);
+
+\draw[blue, dotted, line width=1pt] (13,0.08) -- (13,3.9);
+\draw[red, dotted, line width=1pt] (13,0) -- (13,3.82);
+\draw[blue, dotted, line width=1pt] (13,4.28) -- (13,7);
+\draw[red, dotted, line width=1pt] (13,4.2) -- (13,6.92);
+
+\draw [red, fill] (13,1.5) circle [radius=0.08];
+\draw [red, fill] (13,2.1) circle [radius=0.08];
+\draw [red, fill] (13,2.6) circle [radius=0.08];
+\draw [red, fill] (13,3.0) circle [radius=0.08];
+\draw [red, fill] (13,3.3) circle [radius=0.08];
+\draw [red, fill] (13,3.5) circle [radius=0.08];
+\node at (13.4,1.4){$c_0$};
+\node at (13.4,2.0){$c_1$};
+\node at (13.4,2.5){$c_2$};
+\node at (13.1,-.8){$\mathbb N_4$};
+\draw[black, line width=1pt] (12.84,0.05) arc (230:310:.25);
+\draw[black, line width=1pt] (13.16,3.85) arc (50:130:.25);
+\draw[black, line width=1pt] (12.84,4.25) arc (230:310:.25);
+%\draw [fill] (13,4.25) circle [radius=0.08];
+\draw[black, line width=1pt] (13.16,7) arc (50:130:.25);
+
+
+
+\draw[dashed, line width=1.2pt] (2,4) -- (15,4);
+
+\end{tikzpicture}
+}
+\end{picture}
+\begin{caption}
+  {\sc $\mathbb N_1\prec\mathbb N_2\prec\mathbb N_3\prec\mathbb N_4\prec\mathbb N_2$}
+\end{caption}
+\end{figure}
+\end{frame}
+
+
+
+\begin{frame} 
+  \frametitle{More observations about the uncolored version}
+
+\pause
+
+\begin{enumerate}
+\item $\mathbb M_2$ \pause
+  (the model where $\textrm{lub}(c_i)$ exists in the model) \pause
+  does not have the type-extension
+  property. \pause
+The problem involves the bound $a = \textrm{lub}(c_i)$. \pause
+\item If $a=\textrm{lub}(c_i)$,
+  then $p=\{c_i<x<a\;|\;i\in\omega\}$ is a
+  $1$-type in $L(\{a\})$, which is not realized
+  in $(\mathbb M_2)_a$. \pause
+  Thus, $\mathbb M_2$ is weakly saturated, while
+  an expansion by a single constant is no longer
+  weakly saturated. \pause
+\item All upper bounds of the sequence $(c_i)_{i\in\omega}$
+  have the same $1$-type over the empty set \pause
+  (namely $\textrm{Top}(x)$). \pause
+  But $a = \textrm{lub}(c_i)$ does not differ from
+  other realizations of $\textrm{Top}(x)$ by an automorphism. \pause
+\item On the other hand, $\mathbb M_3$ does have the type-extension
+  property, \pause any expansion of $\mathbb M_3$ by finitely
+  many constants is again weakly saturated, \pause
+  and any two tuples of the same type
+  in $\mathbb M_3$ differ by an automorphism. \pause
+  $\mathbb M_3$ is $\omega$-saturated.
+\end{enumerate}
+
+\end{frame}
+
+
+\begin{frame} 
+  \frametitle{Isomorphism}
+
+  \pause
+  Let $\mathbb A$ and $\mathbb B$ be countable structures
+  both enumerated by $\omega$: \pause
+
+$\mathbb A = \{a_0, a_1, a_2, \ldots\}$ \pause
+ 
+$\mathbb B = \{b_0, b_1, b_2, \ldots\}$ \pause
+
+  The assignment $a_i\mapsto b_i$ is an isomorphism iff it is type-preserving:
+  \pause
+
+  \begin{equation}\label{type_eq}
+\textrm{tp}(a_0\cdots a_{n-1}) = \textrm{tp}(b_0\cdots b_{n-1}) 
+  \end{equation}
+  for all $n$.  \pause
+
+  \bigskip
+
+Suppose we want to build an isomorphism one element at a time,
+by ensuring that, \pause
+given equality of types of length-$n$
+  initial segments $\wec{a}, \wec{b}$, as in (\ref{type_eq}),
+  and given the choice for $a_n$, we can find
+  a corresponding choice for $b_n$. \pause
+  If we work only with types over the empty set,
+  then we need some form of 
+  the type-extension lemma. \pause
+  It is enough to assume $\mathbb A$ and $\mathbb B$ are weakly
+  saturated \pause
+  PLUS any two tuples of the same type differ by an automorphism.
+  \pause
+  OR, we can work with $\mathbb A_{\wec{a}}$
+  and $\mathbb B_{\wec{b}}$ and then deal only with types
+  in the expanded language $L(\wec{a})$. \pause
+  
+\end{frame}
+
+
+
+\begin{frame} 
+  \frametitle{$\omega$-saturation}
+
+\pause
+\noindent
+{\bf Defn.} Let $T$ be a complete theory. \pause
+\begin{enumerate}
+\item A model $\mathbb M$ of $T$ is \emph{$\omega$-saturated}
+  if, \pause whenever $\wec{a}\in M^n$, $\mathbb M_{\wec{a}}$
+  realizes every type in $S_1(\wec{a})$.
+  \pause
+  Often written ``whenever $A\subseteq \mathbb M$, $|A|<\omega$,
+  $\mathbb M_A$ realizes every type
+  in $S_1(A)$''. \footnote{Equivalently,
+$\mathbb M_{A}$
+    realizes every type in $S_n(A)$ for each finite $n$,
+  Proposition 4.3.2, Marker.}
+  \pause
+\item (Type extension) \pause
+  A model $\mathbb M$ of $T$ is \emph{$\omega$-homogeneous}
+  if, \pause
+  whenever $\wec{a}, \wec{b}\in M^n$, 
+  $\textrm{tp}(\wec{a})=\textrm{tp}(\wec{b})$,
+  and $c\in M$, then there exists $d\in M$
+  such that   $\textrm{tp}(\wec{a}c)=\textrm{tp}(\wec{b}d)$. \pause
+\item 
+  A model $\mathbb M$ of $T$ is \emph{strongly $\omega$-homogeneous}
+  if, \pause
+  whenever $\wec{a}, \wec{b}\in M^n$, 
+  $\textrm{tp}(\wec{a})=\textrm{tp}(\wec{b})$,
+  then there is an automorphism $\alpha$ of $\mathbb M$
+  such that $\alpha(\wec{a})=\wec{b}$. \pause
+\item A model $\mathbb M$ of $T$ is \emph{$\omega^+$-universal}
+  every countable model of $T$ is elementarily
+  embeddable in $\mathbb M$. \pause
+  (In particular, an $\omega^+$-universal model will be weakly saturated.)
+\end{enumerate}
+        
+\end{frame}
+
+
+\begin{frame} 
+  \frametitle{Relationships}
+
+\pause
+\noindent
+    {\bf Theorem.} Let $T$ be a complete theory in a countable language.
+    TFAE about a countable model $\mathbb M$ of $T$. \pause
+\begin{enumerate}
+\item $\mathbb M$ is $\omega$-saturated. \pause
+\item $\mathbb M$ is weakly saturated and $\omega$-homogeneous.
+  ($\mathbb M$ realizes all types over the empty set
+  and has the type extension property.) \pause
+\item $\mathbb M$ is weakly saturated and strongly
+  $\omega$-homogeneous. \pause
+\item $\mathbb M$ is $\omega^+$-universal and $\omega$-homogeneous. \pause
+\item $\mathbb M$ is $\omega^+$-universal and
+  strongly $\omega$-homogeneous. \pause
+\end{enumerate}
+
+\medskip
+\pause
+\noindent
+{\bf Trivial implications.} \pause
+
+$\omega^+$-universality implies weak saturation.  \pause
+
+Strong $\omega$-homogeneity implies $\omega$-homogeneity. \pause
+
+\medskip
+\pause
+\noindent
+{\bf Not-too-hard implications.} \pause
+
+$\omega$-saturation implies strong $\omega$-homogeneity. \pause
+(Back and forth.) \pause
+
+$\omega$-saturation implies $\omega^+$-universality.  \pause
+(Forth.) \pause
+
+\end{frame}
+
+
+\begin{frame} 
+  \frametitle{A proof sketch}
+
+\pause
+\noindent
+    {\bf Theorem.}
+    Two countable $\omega$-saturated models of $T$ are isomorphic. \pause
+(Back and forth.) \pause
+
+\bigskip
+
+Assume $\mathbb A$ and $\mathbb B$ are $\omega$-saturated models of $T$. \pause
+
+\medskip
+
+Enumerate them. \pause
+
+\medskip
+
+Start back and forth: \pause Assume that $f: \wec{a}\to \wec{b}$
+is a partial isomorphism that we want to extend. \pause
+At this point,
+$\textrm{tp}^{\mathbb A}(\wec{a})=\textrm{tp}^{\mathbb B}(\wec{b})$. \pause
+Equivalently, $\mathbb A\models \varphi(\wec{a})$
+iff $\mathbb B\models \varphi(\wec{b})$. \pause
+Equivalently, $\mathbb A_{\wec{a}}\equiv \mathbb B_{\wec{b}}$. \pause
+
+\medskip
+
+Assume it is our turn to extend the domain. \pause
+Let $c\in \mathbb A$ be the least unconsidered element. \pause
+Let $p=\textrm{tp}^{\mathbb A_{\wec{a}}}(c)$. \pause
+Let $d$ be a realization of $p$ in $\mathbb B_{\wec{b}}$. \pause
+Thus, $\mathbb A\models \theta(\wec{a}c)$
+iff $\mathbb B\models \theta(\wec{b}d)$. \pause
+I.e.,  $\textrm{tp}^{\mathbb A}(\wec{a}c)=\textrm{tp}^{\mathbb B}(\wec{b}d)$. \pause
+Extend $f$ so that $f(c)=d$. \pause $\Box$ \pause
+\bigskip
+
+When $\mathbb A=\mathbb B$, this argument proves strong $\omega$-homogeneity
+of $\omega$-saturated models. \pause
+Half of the argument proves $\omega$-universality.
+\end{frame}
+
+
+\begin{frame} 
+  \frametitle{Existence and uniqueness}
+
+\bigskip
+\pause
+
+\noindent
+    {\bf Theorem.} Let $T$ be a complete theory in a countable language.
+    If $\mathbb A$ and $\mathbb B$ are countable $\omega$-saturated models
+    of $T$, then $\mathbb A\cong \mathbb B$.     
+
+\pause
+\noindent
+    {\bf Theorem.} Let $T$ be a complete theory in a countable language.
+TFAE. \pause
+\begin{enumerate}
+\item $T$ has a countable weakly saturated model.
+\item $T$ is ``small''. ($|S_n(T)|<2^{\aleph_0}$ for all $n$.)
+\item $T$ has a countable $\omega$-saturated model.
+\end{enumerate}
+\end{frame}
 
 \end{document}
 
